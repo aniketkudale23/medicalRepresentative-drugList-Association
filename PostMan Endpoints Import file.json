@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "87bf67db-6116-41b4-94cd-73830c1b74b5",
+		"name": "RepresentativeTask copy",
+		"description": "create a representative",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/representative/create",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "fa5138f4-c6e2-499d-bace-315f2c010356",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"representativeFirstName\": \"aniket\",\n\t\"representativeLastName\": \"kudale\",\n\t\"companyId\": 123,\n\t\"representativeAddress\": \"pune maharashtra\",\n\t\"representativeCountry\": \"IN\",\n\t\"representativeState\": \"MH\",\n\t\"representativeCity\": \"Pune\",\n\t\"representativePinCode\": \"411048\",\n\t\"drugList\" : [\n\t\t{\n\t\t\t\"name\": \"CLAVAM3\",\n\t\t\t\"description\": \"Anti-bio\",\n\t\t\t\"about\": \"cipla\",\n\t\t\t\"symptoms\": \"anti-bacteria\",\n\t\t\t\"moleculeName\": \"xyz\"\n\t\t}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/representative/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"representative",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/representative/edit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\n    \"representativeFirstName\": \"aniket\",\n    \"representativeLastName\": \"kudale\",\n    \"companyId\": 123,\n    \"representativeEmployeeId\": 5,\n    \"representativeAddress\": \"pune maharashtra\",\n    \"representativeCountry\": \"IN\",\n    \"representativeState\": \"MH\",\n    \"representativeCity\": \"Pune\",\n    \"representativePinCode\": \"411048\",\n     \"drugList\": [\n        {\n            \"name\": \"CLAVAM3/4/4\",\n            \"description\": \"Anti-bio\",\n            \"about\": \"cipla\",\n            \"symptoms\": \"anti-bacteria\",\n            \"moleculeName\": \"xyz\",\n            \"productCode\": \"deff27ec-c42b-418a-9727-6f97f1a4904d\"\n        }\n    ]\n   \n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/representative/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"representative",
+						"edit"
+					]
+				},
+				"description": "Edit representative"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/representative/delete?empId=6",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/representative/delete?empId=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"representative",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "empId",
+							"value": "6"
+						}
+					]
+				},
+				"description": "delete representative"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/representative/getRepresentatives",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/representative/getRepresentatives",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"representative",
+						"getRepresentatives"
+					]
+				},
+				"description": "ListAllrepresentatives"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/representative/getRepresentativeById?id=1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/representative/getRepresentativeById?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"representative",
+						"getRepresentativeById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "find representatives by id"
+			},
+			"response": []
+		}
+	]
+}
